@@ -1,0 +1,25 @@
+// MiMo Desktop / mimocode 配置示例：Settings → MCP，或编辑
+// ~/.config/mimocode/mimocode.jsonc 的顶层 "mcp" 字段。
+// 改完后重启引擎或新开会话生效。
+{
+  "mcp": {
+    "12306-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "12306-mcp"],
+      "enabled": true
+    }
+  }
+}
+
+// Claude Desktop / 其他 mcpServers 风格配置示例：
+// {
+//   "mcpServers": {
+//     "12306-mcp": {
+//       "command": "npx",
+//       "args": ["-y", "12306-mcp"]
+//     }
+//   }
+// }
+
+// 可选：HTTP 模式（需要宿主支持远程/URL 型 MCP）
+// npx -y 12306-mcp --port 8080
